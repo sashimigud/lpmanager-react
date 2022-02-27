@@ -11,6 +11,7 @@ const initialState = {
   alleElever: null,
   alleLaereplaner: [],
   valgteLaereplaner: [],
+  valgteApiLaereplaner: [],
   valgteLPM: [],
 };
 
@@ -40,6 +41,11 @@ const reducer = (state: IState, action: IDispatch) => {
       return {
         ...state,
         valgteLaereplaner: action.payload,
+      };
+    case 'velgApiLaereplaner':
+      return {
+        ...state,
+        valgteApiLaereplaner: action.payload,
       };
     case 'toggleSett':
       const planIndex = state.valgteLaereplaner.indexOf(action.payload);

@@ -1,5 +1,5 @@
 import { IElev } from "./elever";
-import { ILaereplan } from "./laereplaner";
+import { IFormatedLpm, ILaereplan } from "./laereplaner";
 
 export interface IDispatch {
   type: string;
@@ -10,6 +10,7 @@ export interface IState {
   valgtElev: string;
   alleElever: IElev[] | null;
   alleLaereplaner: ILaereplan[];
-  valgteLaereplaner: ILaereplan[];
+  valgteLaereplaner: IFormatedLpm[];
+  valgteApiLaereplaner: ILaereplan[];
   valgteLPM: any[];
 }

@@ -65,7 +65,7 @@ const Dashboard: FC = () => {
   };
 
   const onChosenModule = (module: string) => {
-    dispatch({ type: 'velgLaereplaner', payload: selectedResults });
+    dispatch({ type: 'velgApiLaereplaner', payload: selectedResults });
 
     if (module === 'YFF') {
       navigate('/YFF');

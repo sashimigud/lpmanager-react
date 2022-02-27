@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './spinner.styles.scss';
 
-const LoadingScreen: FC = () => {
+const Spinner: FC = () => {
   return (
     <div className="loading-container">
       <div className="spinner"></div>
@@ -10,4 +10,4 @@ const LoadingScreen: FC = () => {
   );
 };
 
-export default LoadingScreen;
+export default Spinner;

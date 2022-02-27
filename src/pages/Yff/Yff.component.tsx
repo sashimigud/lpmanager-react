@@ -5,7 +5,7 @@ import { IElev } from '../../_models/elever';
 
 import { useNavigate } from 'react-router-dom';
 import LoadingScreen from '../../components/spinner/Spinner.component';
-//import LpmList from '../lpm-list/LpmList.component';
+//import LpmList from '../../components/lpm-list/LpmList.component';
 import CustomButton from '../../components/customButton/CustomButton.component';
 import { useStore } from '../../store/globalStore';
 import { formatLP } from '../../_utilities/lpFormat';
@@ -35,10 +35,10 @@ const YFF = () => {
   // ------------------------------------------ FETCH læreplansett
   useEffect(() => {
     const fetchIndividuelleLP = async () => {
-      if (state.valgteLaereplaner.length === 0) {
+      if (state.valgteApiLaereplaner.length === 0) {
         return;
       } else {
-        for await (const laereplan of state.valgteLaereplaner) {
+        for await (const laereplan of state.valgteApiLaereplaner) {
           try {
             fetch(laereplan.url, {
               headers: new Headers({
