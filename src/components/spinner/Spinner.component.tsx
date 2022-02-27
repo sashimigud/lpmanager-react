@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './loading.styles.scss';
+import './spinner.styles.scss';
 
 const LoadingScreen: FC = () => {
   return (

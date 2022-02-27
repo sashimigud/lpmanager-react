@@ -3,7 +3,7 @@ import './customButton.styles.scss';
 
 interface ICustomButtonProps {
   isDisabled: boolean;
-  setWidth: boolean;
+  setWidth?: boolean;
   onClick: () => void;
   text: string;
 }
