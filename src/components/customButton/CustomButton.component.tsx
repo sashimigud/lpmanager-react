@@ -2,7 +2,7 @@ import React from 'react';
 import './customButton.styles.scss';
 
 interface ICustomButtonProps {
-  isDisabled: boolean;
+  isDisabled?: boolean;
   setWidth?: boolean;
   onClick: () => void;
   text: string;

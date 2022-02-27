@@ -6,7 +6,7 @@ import { StoreProvider } from './store/globalStore';
 import Header from './components/header/Header.component';
 import ImportStudents from './pages/importStudents/ImportStudents.component';
 import Dashboard from './pages/dashboard/Dashboard.component';
-import YFF from './pages/Yff/Yff.component';
+import YffContainer from './pages/Yff';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ImportStudents />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/YFF" element={<YFF />} />
+            <Route path="/YFF/*" element={<YffContainer />} />
           </Routes>
         </Router>
       </StoreProvider>

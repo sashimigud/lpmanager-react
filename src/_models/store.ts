@@ -7,7 +7,7 @@ export interface IDispatch {
 }
 
 export interface IState {
-  valgtElev: string;
+  valgtElev: IElev;
   alleElever: IElev[] | null;
   alleLaereplaner: ILaereplan[];
   valgteLaereplaner: IFormatedLpm[];

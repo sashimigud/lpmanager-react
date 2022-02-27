@@ -1,0 +1,49 @@
+.project {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid orange;
+  padding-top: 10px;
+  border-radius: 5px;
+  position: relative;
+
+  .delete-btn {
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: #282827;
+    cursor: pointer;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+
+    &:hover {
+      background-color: rgb(255, 206, 116);
+    }
+  }
+
+  .input-label {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .godkjenn-input {
+    width: 90%;
+    margin: 5px auto 20px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    outline: none;
+  }
+}
