@@ -1,0 +1,117 @@
+$break-medium: 1000px;
+
+.home-container {
+  width: 60%;
+  max-width: 700px;
+  height: 400px;
+  max-height: 500px;
+  margin: 70px auto;
+  background-color: #078893;
+  border-radius: 4px;
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+
+  @media screen and (max-width: $break-medium) {
+    width: 90%;
+  }
+
+  .home-content {
+    color: white;
+
+    h1 > span {
+      color: #282827;
+    }
+  }
+
+  .help-btn {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #e88640;
+    color: #e88640;
+    color: #282827;
+    border-color: #282827;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+
+    &:hover {
+      color: #fcb683;
+      border-color: #fcb683;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .help-btn-active {
+    color: #e88640;
+    border-color: #e88640;
+  }
+
+  .help-btn-dormant {
+    color: #282827;
+    border-color: #282827;
+  }
+
+  .help-message {
+    position: absolute;
+    width: 380px;
+    height: 60px;
+    padding-top: 13px;
+    border-radius: 5px;
+    background-color: #e88640;
+    border: 1px solid lightsalmon;
+    margin-top: 15px;
+    text-align: center;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+
+    p {
+      //color:#282827;
+      color: white;
+      margin: 0;
+      margin: 3px;
+    }
+  }
+
+  .import-btn {
+    border: 1px solid #2f4f4f;
+    display: inline-block;
+    width: 115px;
+    height: 20px;
+    background-color: #e37222;
+    border-radius: 5px;
+    padding: 6px 12px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+    font-family: 'Ubuntu', sans-serif;
+
+    &:hover {
+      background-color: #fca76a;
+      color: black;
+    }
+
+    &:active {
+      background-color: #ba5913;
+      pointer-events: auto;
+    }
+
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}

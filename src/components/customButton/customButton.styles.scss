@@ -1,0 +1,35 @@
+.custom-btn-container {
+  border: 1px solid #2f4f4f;
+  display: inline-block;
+  height: 20px;
+  background-color: #e37222;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.75);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.custom-btn-container:hover {
+  background-color: #fca76a;
+  color: black;
+}
+
+.custom-btn-container:active {
+  background-color: #a54c0c;
+}
+
+.custom-btn-active {
+  background-color: #ba5913;
+  pointer-events: auto;
+}
+
+.custom-btn-disabled {
+  background-color: grey;
+  pointer-events: none;
+}
+
+.custom-btn-setWidth {
+  width: 115px;
+}
