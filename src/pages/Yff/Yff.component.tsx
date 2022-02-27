@@ -48,25 +48,19 @@ const YFF = () => {
             })
               .then((res) => res.json())
               .then((data) => {
-                console.log(data);
                 setValgtePlaner((prevState) => [...prevState, formatLP(data)]);
               });
           } catch (err) {
             console.log('feil: ', err);
           }
         }
+        dispatch({ type: 'velgLaereplaner', payload: valgtePlaner });
       }
     };
 
     fetchIndividuelleLP();
-  }, [state.valgteLaereplaner]);
-
-  // ------------------------------------------ legger til læreplanersett i global store, avhenger av API-kallet
-
-  useEffect(() => {
-    dispatch({ type: 'velgLaereplaner', payload: valgtePlaner });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [valgtePlaner]);
+  }, [state.valgteLaereplaner]);
 
   // ---------------------------------- OnMethods
 
