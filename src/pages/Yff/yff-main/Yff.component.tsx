@@ -54,13 +54,12 @@ const YFF: FC = () => {
             console.log('feil: ', err);
           }
         }
-        dispatch({ type: 'velgLaereplaner', payload: valgtePlaner });
       }
     };
 
     fetchIndividuelleLP();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.valgteLaereplaner]);
+  }, []);
 
   // ---------------------------------- OnMethods
 
@@ -81,6 +80,13 @@ const YFF: FC = () => {
   const onNext = () => {
     navigate('godkjenn');
   };
+
+  useEffect(() => {
+    if (valgtePlaner.length > 0) {
+      dispatch({ type: 'velgLaereplaner', payload: valgtePlaner });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [valgtePlaner]);
 
   // ------------------------ RENDER
 
